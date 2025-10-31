@@ -1,0 +1,237 @@
+<div class="app-shell">
+  <!-- Header (100px tall, brand-left, nav links only) -->
+  <header class="k-header">
+    <div class="brand">KINK EARPHONES</div>
+    <nav class="k-nav" aria-label="Primary">
+      <a href="#features" (click)="$event.preventDefault(); scrollTo('features')">Features</a>
+      <a href="#why" (click)="$event.preventDefault(); scrollTo('why')">Why KINK</a>
+      <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')">Models & Pricing</a>
+      <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials')">Testimonials</a>
+      <a href="#faq" (click)="$event.preventDefault(); scrollTo('faq')">FAQ</a>
+    </nav>
+    <div class="burger" role="button" aria-label="Toggle menu" tabindex="0" (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </div>
+    <div class="mobile-menu-card" *ngIf="mobileMenuOpen">
+      <a href="#features" (click)="$event.preventDefault(); closeMenuAndScroll('features')">Features</a>
+      <a href="#why" (click)="$event.preventDefault(); closeMenuAndScroll('why')">Why KINK</a>
+      <a href="#plans" (click)="$event.preventDefault(); closeMenuAndScroll('plans')">Models & Pricing</a>
+      <a href="#testimonials" (click)="$event.preventDefault(); closeMenuAndScroll('testimonials')">Testimonials</a>
+      <a href="#faq" (click)="$event.preventDefault(); closeMenuAndScroll('faq')">FAQ</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <mat-card class="hero-card">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Hear Every Detail. Feel Every Beat.</h1>
+          <p class="sub">KINK-engineered earphones with hi-res drivers, hybrid noise canceling, and cloud-soft comfort—built to last.</p>
+          <ul class="hero-bullets">
+            <li>Hi‑Res tuned graphene drivers for crisp detail and tight bass</li>
+            <li>Hybrid ANC up to 35 dB with natural Transparency mode</li>
+            <li>Up to 36 hours total playtime with 10‑minute quick charge</li>
+          </ul>
+          <div class="cta-row">
+            <button mat-raised-button color="primary" class="cta-primary">Shop KINK</button>
+            <button mat-stroked-button class="cta-secondary">See the tech</button>
+          </div>
+          <p class="micro">Free 30‑day returns and a 2‑year warranty.</p>
+        </div>
+      </div>
+    </mat-card>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section section-plain">
+    <div class="container">
+      <h2>Features</h2>
+      <p class="muted">Studio-grade tuning, hybrid ANC, and an all-day fit designed for real life.</p>
+      <div class="card-grid">
+        <mat-card class="feature-card">
+          <div class="card-title-row"><mat-icon>graphic_eq</mat-icon><span>Hi‑Res Graphene Drivers</span></div>
+          <mat-card-content>Enjoy a balanced, fatigue‑free sound signature—crisp highs, rich mids, and controlled bass.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card">
+          <div class="card-title-row"><mat-icon>noise_aware</mat-icon><span>Hybrid Active Noise Canceling</span></div>
+          <mat-card-content>Block up to 35 dB of noise and switch to Transparency to keep conversations and traffic cues clear.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card">
+          <div class="card-title-row"><mat-icon>earbuds</mat-icon><span>Fit That Disappears</span></div>
+          <mat-card-content>Ergonomic shells plus 5 sizes of tips create a secure, pressure‑free seal for all‑day comfort.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card">
+          <div class="card-title-row"><mat-icon>battery_charging_full</mat-icon><span>Weeklong Battery</span></div>
+          <mat-card-content>Up to 9 hours per charge, 36 hours with the case. A 10‑minute top‑up powers 2 hours of listening.</mat-card-content>
+        </mat-card>
+      </div>
+      <p class="muted small">Bluetooth 5.3 with AAC and aptX Adaptive (device‑dependent), low‑latency mode for gaming, dual mics with cVc noise reduction, IPX5 water resistance, and a pocketable aluminum charging case.</p>
+    </div>
+  </section>
+
+  <!-- Why KINK -->
+  <section id="why" class="section section-dark">
+    <div class="container">
+      <h2>Why KINK</h2>
+      <div class="card-grid">
+        <mat-card class="why-card"><h3>Engineered In‑House</h3><p>From driver selection to acoustic tuning, our audio team controls every step—no white‑label compromises.</p></mat-card>
+        <mat-card class="why-card"><h3>Materials That Matter</h3><p>Graphene diaphragms, gold‑plated connectors, and sweat‑sealed housings built for years of daily use.</p></mat-card>
+        <mat-card class="why-card"><h3>Fair Pricing</h3><p>Direct‑from‑maker means top‑shelf parts and sound without the boutique markup.</p></mat-card>
+        <mat-card class="why-card"><h3>Support That Sticks</h3><p>2‑year warranty, fast replacements, and responsive human support when you need it.</p></mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section section-plain">
+    <div class="container">
+      <h2>About</h2>
+      <p class="lead">KINK is an independent audio brand obsessed with one thing: faithful sound. We prototype relentlessly, measure rigorously, and listen with real artists and everyday commuters until it feels right.</p>
+      <ul class="highlights">
+        <li>In‑house acoustic lab and anechoic testing</li>
+        <li>Co‑designed with mastering engineers and gamers</li>
+        <li>Responsible manufacturing and end‑of‑life recycling support</li>
+      </ul>
+      <div class="stats">
+        <mat-card class="stat"><div class="value">137</div><div class="label">Prototypes tested</div></mat-card>
+        <mat-card class="stat"><div class="value">1,200+ hours</div><div class="label">Listening sessions</div></mat-card>
+        <mat-card class="stat"><div class="value">2 years</div><div class="label">Warranty period</div></mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section id="useCases" class="section section-dark">
+    <div class="container">
+      <h2>Use Cases</h2>
+      <div class="card-grid">
+        <mat-card class="feature-card"><h3>Commute & Travel</h3><p>Silence engine rumble with ANC and hear announcements instantly with Transparency.</p></mat-card>
+        <mat-card class="feature-card"><h3>Workouts</h3><p>Sweat‑resistant IPX5 build and a lock‑in fit that won't budge mid‑rep.</p></mat-card>
+        <mat-card class="feature-card"><h3>Calls & Meetings</h3><p>Dual mics with noise reduction keep your voice front and center in any café.</p></mat-card>
+        <mat-card class="feature-card"><h3>Create & Game</h3><p>Low‑latency mode for tight sync and a neutral tuning that reveals mix decisions.</p></mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Models & Pricing -->
+  <section id="plans" class="section section-plain">
+    <div class="container">
+      <h2>Models & Pricing</h2>
+      <div class="plans">
+        <mat-card class="plan">
+          <div class="plan-name">KINK Pulse</div>
+          <div class="price">$79</div>
+          <ul class="plan-bullets">
+            <li>Balanced sound with graphene drivers</li>
+            <li>ANC + Transparency</li>
+            <li>28 hrs total battery</li>
+          </ul>
+          <button mat-stroked-button class="plan-cta">Buy KINK Pulse</button>
+        </mat-card>
+        <mat-card class="plan plan-featured">
+          <div class="plan-name">KINK Flux</div>
+          <div class="price">$129</div>
+          <ul class="plan-bullets">
+            <li>Expanded soundstage and deeper bass</li>
+            <li>Hybrid ANC up to 35 dB</li>
+            <li>36 hrs total + quick charge</li>
+          </ul>
+          <button mat-raised-button color="accent" class="plan-cta-accent">Buy KINK Flux</button>
+        </mat-card>
+        <mat-card class="plan">
+          <div class="plan-name">KINK Apex</div>
+          <div class="price">$199</div>
+          <ul class="plan-bullets">
+            <li>Flagship hi‑res tuning and premium tips</li>
+            <li>aptX Adaptive + low‑latency mode</li>
+            <li>Aluminum case, 36 hrs total</li>
+          </ul>
+          <button mat-stroked-button class="plan-cta">Buy KINK Apex</button>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section section-dark">
+    <div class="container">
+      <h2>Testimonials</h2>
+      <div class="card-grid">
+        <mat-card class="quote"><p class="q">“The tuning is honest and musical. I can rehearse for hours without fatigue.”</p><p class="a">— Lena Park, Touring Musician</p></mat-card>
+        <mat-card class="quote"><p class="q">“KINK delivers flagship features at mid‑tier pricing—ANC and comfort are standouts.”</p><p class="a">— Marco Alvarez, Tech Reviewer, SoundBench</p></mat-card>
+        <mat-card class="quote"><p class="q">“Blocks the train roar but lets me hear announcements. The fit is super secure.”</p><p class="a">— Aisha Bryant, Daily Commuter</p></mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (Mat Expansion) -->
+  <section id="faq" class="section section-plain">
+    <div class="container">
+      <h2>FAQ</h2>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Do they work with my phone?</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>Yes. KINK earphones use Bluetooth 5.3 and support common codecs like AAC and aptX Adaptive (where supported by your device).</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Can I run in the rain?</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>They're IPX5 water‑resistant, which protects against sweat and splashes. Avoid submersion.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>What's included?</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>Earphones, charging case, USB‑C cable, 5 pairs of ear tips, and a quick‑start guide.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>What's the warranty?</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>A 2‑year limited warranty with fast replacements. Try them risk‑free with 30‑day returns.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>How do I get support?</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>Email support&#64;kinkaudio.com or use live chat (Mon–Fri, 9am–6pm).</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container foot-grid">
+      <div class="foot-brand">
+        <div class="foot-logo">KINK</div>
+        <div class="foot-blurb">KINK builds honest, durable audio gear that puts sound first. Designed by engineers, tuned with artists, and backed by a 2‑year warranty.</div>
+      </div>
+      <div class="foot-links">
+        <div>
+          <div class="foot-head">Product</div>
+          <a href="#features" (click)="$event.preventDefault(); scrollTo('features')">Features</a>
+          <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')">Models & Pricing</a>
+          <a href="#" aria-label="Support Docs">Support Docs</a>
+        </div>
+        <div>
+          <div class="foot-head">Company</div>
+          <a href="#about" (click)="$event.preventDefault(); scrollTo('about')">About</a>
+          <a href="#" aria-label="Careers">Careers</a>
+          <a href="#" aria-label="Contact">Contact</a>
+        </div>
+        <div>
+          <div class="foot-head">Legal</div>
+          <a href="#" aria-label="Privacy">Privacy</a>
+          <a href="#" aria-label="Terms">Terms</a>
+        </div>
+      </div>
+    </div>
+    <mat-divider class="foot-divider"></mat-divider>
+    <div class="container foot-copy">© 2025 kink-earphones. All rights reserved.</div>
+  </footer>
+</div>
